@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- 参考URL：http://blog.okazuki.jp/entry/2016/12/08/234524 -->
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:GridTest"
+             x:Class="GridTest.MainPage">
+    <!-- Grid：格子状にレイアウトを区切り、コントロールを配置する (例 3×3)-->
+    <Grid>
+        <!-- 行の定義 -->
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <!-- 列の定義 -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <BoxView Color="Red" />
+        <BoxView Color="Blue"
+                 Grid.Row="0"
+                 Grid.Column="1" />
+        <BoxView Color="Aqua"
+                 Grid.Row="0"
+                 Grid.Column="2" />
+        <BoxView Color="Maroon"
+                 Grid.Row="1"
+                 Grid.Column="0" />
+        <BoxView Color="Navy"
+                 Grid.Row="1"
+                 Grid.Column="1" />
+        <BoxView Color="Silver"
+                 Grid.Row="1"
+                 Grid.Column="2" />
+        <BoxView Color="Purple"
+                 Grid.Row="2"
+                 Grid.Column="0" />
+        <BoxView Color="Lime"
+                 Grid.Row="2"
+                 Grid.Column="1" />
+        <BoxView Color="Yellow"
+                 Grid.Row="2"
+                 Grid.Column="2" />
+
+        <!-- セルの結合もできる -->
+        <!--<BoxView Color="Red"
+                 Grid.RowSpan="2"
+                 Grid.ColumnSpan="3" />
+        <BoxView Color="Yellow"
+                 Grid.Row="2"
+                 Grid.Column="1"
+                 Grid.ColumnSpan="2" />-->
+    </Grid>
+
+</ContentPage>
